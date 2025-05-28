@@ -1,24 +1,73 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohior's</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 text-center py-10">
-    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
-      <h1 class="text-3xl font-bold mb-4">Fundraiser Progress</h1>
-      <p class="text-lg mb-4">Our goal is $5000. We've raised $1230 so far!</p>
-      <div class="w-full bg-gray-200 rounded-full h-6 mb-4">
-        <div class="bg-blue-500 h-6 rounded-full" style="width: 24.6%">
-          $1230
+<head>
+  <meta charset="UTF-8" />
+  <title>Create a Fundraiser</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    .custom-box {
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      border-radius: 8px;
+        /* Add this line for border */
+  border: 2px solid #3273dc; /* Bulma primary blue color */
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .logo-container img {
+      height: 80px; /* Increased size for visibility */
+      margin: 0 10px;
+    }
+    .bank-info {
+      text-align: left;
+      margin-top: 1rem;
+      line-height: 1.4; /* Tighter line spacing */
+    }
+    .bank-info p {
+      margin-bottom: 0.3rem; /* Smaller spacing between lines */
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="custom-box has-text-centered">
+
+          <!-- Logo Section -->
+          <div class="logo-container">
+            <img src="./myimage.jpg" alt="Fundraiser Logo">
+            <span style="font-size: 2rem">|</span>
+            <h1 class="title is-4">Fundraiser</h1>
+          </div>
+
+          <!-- Description Section -->
+          <p class="mb-3">
+            Join me in raising funds for promoting healthy living and wellness! 
+            Your support will help provide essential resources for a better lifestyle, 
+            including nutritional programs, and mental health support.
+          </p>
+
+          <!-- Bank Info with compact spacing -->
+          <div class="bank-info has-text-centered">
+            <p><strong>Bank:</strong> Access Bank</p>
+            <p><strong>Number:</strong> 1475958049</p>
+            <!-- <p><strong>Name:</strong> John Doe</p> -->
+          </div>
         </div>
       </div>
-      <a
-        href="https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_ID"
-        class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >Donate Now</a
-      >
     </div>
-  </body>
+  </section>
+</body>
 </html>
