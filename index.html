@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Create a Fundraiser</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <style>
-    .custom-box {
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      padding: 2rem;
-      border-radius: 8px;
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create a Fundraiser</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <style>
+      .custom-box {
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 2rem;
+        border-radius: 8px;
         /* Add this line for border */
-  border: 2px solid #3273dc; /* Bulma primary blue color */
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .logo-container img {
-      height: 80px; /* Increased size for visibility */
-      margin: 0 10px;
-    }
-    .bank-info {
-      text-align: left;
-      margin-top: 1rem;
-      line-height: 1.4; /* Tighter line spacing */
-    }
-    .bank-info p {
-      margin-bottom: 0.3rem; /* Smaller spacing between lines */
-    }
-    .button-container {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-  <section class="hero is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <div class="custom-box has-text-centered">
+        border: 2px solid #3273dc; /* Bulma primary blue color */
+      }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .logo-container img {
+        height: 80px; /* Increased size for visibility */
+        margin: 0 10px;
+      }
+      .bank-info {
+        text-align: left;
+        margin-top: 1rem;
+        line-height: 1.4; /* Tighter line spacing */
+      }
+      .bank-info p {
+        margin-bottom: 0.3rem; /* Smaller spacing between lines */
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="custom-box has-text-centered">
+            <!-- Logo Section -->
+            <div class="logo-container">
+              <img src="./myimage.jpg" alt="Fundraiser Logo" />
+              <span style="font-size: 2rem">|</span>
+              <h1 class="title is-4">Fundraiser</h1>
+            </div>
 
-          <!-- Logo Section -->
-          <div class="logo-container">
-            <img src="./myimage.jpg" alt="Fundraiser Logo">
-            <span style="font-size: 2rem">|</span>
-            <h1 class="title is-4">Fundraiser</h1>
-          </div>
+            <!-- Description Section -->
+            <p class="mb-3">
+              Join me in raising funds for promoting healthy living and
+              wellness! Your support will help provide essential resources for a
+              better lifestyle, including nutritional programs, and mental
+              health support.
+            </p>
 
-          <!-- Description Section -->
-          <p class="mb-3">
-            Join me in raising funds for promoting healthy living and wellness! 
-            Your support will help provide essential resources for a better lifestyle, 
-            including nutritional programs, and mental health support.
-          </p>
-
-          <!-- Bank Info with compact spacing -->
-          <div class="bank-info has-text-centered">
-            <p><strong>Bank:</strong> Access Bank</p>
-            <p><strong>Number:</strong> 1475958049</p>
-            <!-- <p><strong>Name:</strong> John Doe</p> -->
+            <!-- Bank Info with compact spacing -->
+            <div class="bank-info has-text-centered">
+              <p><strong>Bank:</strong> Access Bank</p>
+              <p><strong>Number:</strong> 1475958049</p>
+              <p><strong>Name:</strong> Ohiorenua</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</body>
+    </section>
+  </body>
 </html>
