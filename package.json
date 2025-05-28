@@ -1,0 +1,29 @@
+{
+  "name": "go-fund-me",
+  "version": "1.0.0",
+  "description": "This website is a go fund me site. It may host some of my other blog or projects",
+  "homepage": "https://github.com/Ohior/go-fund-me#readme",
+  "bugs": {
+    "url": "https://github.com/Ohior/go-fund-me/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ohior/go-fund-me.git"
+  },
+  "license": "Apache-2.0",
+  "author": "iamohior@gmail.com",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
