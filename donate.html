@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohiorenua Aigboje - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .mi_bg-image {
+        position: relative;
+        height: 100%;
+      }
+
+      .mi_bg-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./images/myimage.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      .mi_bg-image > * {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-black font-sans mi_bg-image">
+    <nav class="bg-gray-900 px-4 py-6 text-white shadow-md">
+      <div class="flex items-center justify-between max-w-4xl mx-auto">
+        <!-- Left title -->
+        <a
+          href="/"
+          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-500"
+          >Ohior's</a
+        >
+        <!-- <a href="#" class="text-2xl font-bold bg-pink-500 bg-clip-text text-transparent ">Donate</a> -->
+        <a
+          href="./donate.html"
+          class="text-2xl font-bold bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded transition"
+          >Donate</a
+        >
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen text-center flex flex-col items-center justify-center"
+    >
+      <div class="bg-green-100 shadow rounded-lg sm:w-[100vh] text-left">
+        <div class="bg-green-100 px-16 py-8">
+          <h3 class="text-3xl font-bold pb-3">Living with Scleroderma</h3>
+          <h6 class="text-2xl font-bold text-red-500 pb-3">My Story</h6>
+          <hr class="border-t-2 border-blue-500 my-1" />
+          <span>
+            Hi, I'm <strong>Ohiorenua</strong>. I’m living with
+            <strong>scleroderma</strong>
+          </span>
+          <p>
+            It is a rare autoimmune disease that hardens the skin and affects
+            internal organs. Daily life means managing pain, medications, and
+            constant health costs. Still, I choose to keep going, share my
+            story, and raise awareness. 🙏 Your donation helps me afford
+            treatment, stay stable, and keep pushing forward. Thank you for your
+            support 💙
+          </p>
+          <hr class="border-t-2 border-blue-500 my-1" />
+        </div>
+        <div class="bg-gray-500 shadow rounded-lg sm:w-[100vh] h-[120px] px-8 py-2">
+          <span class="text-green-900"><strong class="text-black">Bank Name : </strong>Access Bank</span><br>
+          <span class="text-green-900"><strong class="text-black">Account Number : </strong>1475958049</span><br>
+          <span class="text-green-900"><strong class="text-black">Account Name : </strong>Ohiorenua Aigboje</span><br>
+          <span class="text-green-900"><strong class="text-black">SWIFT Code : </strong>ABNGNGLAXXX</span><br>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
+      &copy; 2025 Ohiorenua Aigboje. All rights reserved.
+    </footer>
+  </body>
+</html>
