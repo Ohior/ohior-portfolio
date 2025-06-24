@@ -75,12 +75,22 @@
             support 💙
           </p>
           <hr class="border-t-2 border-blue-500 my-1" />
-        </div>
-        <div class="bg-gray-500 shadow rounded-lg max-w-xl h-[120px] px-8 py-2">
-          <span><strong>Bank Name : </strong>Access Bank</span><br>
-          <span><strong>Account Number : </strong>1475958049</span><br>
-          <span><strong>Account Name : </strong>Ohiorenua Aigboje</span><br>
-          <span><strong>SWIFT Code : </strong>ABNGNGLAXXX</span><br>
+          <button
+            type="button"
+            class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
+            onclick="toggleBankTransferVisibility()"
+          >
+            Bank Transfer
+          </button>
+          <div
+  class="hidden bg-gray-800 text-white p-4 rounded transition-opacity duration-300"
+            id="bank-transfer"
+          >
+            <span><strong>Bank Name : </strong>Access Bank</span><br />
+            <span><strong>Account Number : </strong>1475958049</span><br />
+            <span><strong>Account Name : </strong>Ohiorenua Aigboje</span><br />
+            <span><strong>SWIFT Code : </strong>ABNGNGLAXXX</span><br />
+          </div>
         </div>
       </div>
     </section>
@@ -89,5 +99,11 @@
     <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
       &copy; 2025 Ohiorenua Aigboje. All rights reserved.
     </footer>
+    <script>
+      function toggleBankTransferVisibility() {
+        const bank_transfer = document.getElementById("bank-transfer");
+        bank_transfer.classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>

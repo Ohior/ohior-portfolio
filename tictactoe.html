@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohior's</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 px-6 py-4 text-white shadow-md">
+      <div class="flex justify-between items-center max-w-7xl mx-auto w-full">
+        <!-- Left: Logo -->
+        <a
+          href="./index.html"
+          class="text-2xl font-bold bg-clip-text hover:underline bg-gradient-to-r from-red-500 to-purple-500"
+        >
+          Ohior's
+        </a>
+
+        <!-- Right: Donate Button -->
+        <a
+          href="./donate.html"
+          class="text-base font-semibold bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded transition"
+        >
+          Donate
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="py-16">
+      <h1 class="font-bold text-center text-6xl text-red-500 pb-10">
+        TicTacToe
+      </h1>
+      <div id="tictactoe-game"></div>
+    </section>
+    <script src="./scripts/tictactoe.js">
+    </script>
+  </body>
+</html>
