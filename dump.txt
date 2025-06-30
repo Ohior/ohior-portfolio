@@ -1,0 +1,8 @@
+      function toggleBankTransferVisibility() {
+        const bank_transfer = document.getElementById("bank-transfer");
+        bank_transfer.classList.toggle("hidden");
+      }
+      function togglePaymentLinkVisibility() {
+        const bank_transfer = document.getElementById("payment-link");
+        bank_transfer.classList.toggle("hidden");
+      }

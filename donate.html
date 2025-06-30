@@ -33,11 +33,13 @@
     </style>
   </head>
   <body class="bg-black font-sans mi_bg-image">
-        <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="sticky top-0 z-10 bg-gray-900 px-6 py-4 text-white shadow-md">
       <div class="grid sm:grid-cols-12 grid-cols-3 gap-1">
         <div class="col-span-8 flex flex-row items-center">
-          <a href="./index.html" class="text-2xl font-bold sm:p-4 p-1 hover:underline"
+          <a
+            href="./index.html"
+            class="text-2xl font-bold sm:p-4 p-1 hover:underline"
             >Ohior's</a
           >
         </div>
@@ -75,13 +77,22 @@
             support 💙
           </p>
           <hr class="border-t-2 border-blue-500 my-1" />
-          <button
-            type="button"
-            class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
-            onclick="toggleBankTransferVisibility()"
-          >
-            Bank Transfer
-          </button>
+          <div class="grid grid-cols-2 gap-1">
+            <button
+              type="button"
+              class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
+              onclick="toggleBankTransferVisibility()"
+            >
+              Bank Transfer
+            </button>
+            <button
+              type="button"
+              class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
+              onclick="togglePaymentLinkVisibility()"
+            >
+              Payment Link
+            </button>
+          </div>
           <div
             class="hidden bg-gray-800 text-white p-4 rounded transition-opacity duration-300"
             id="bank-transfer"
@@ -90,6 +101,19 @@
             <span><strong>Account Number : </strong>1475958049</span><br />
             <span><strong>Account Name : </strong>Ohiorenua Aigboje</span><br />
             <span><strong>SWIFT Code : </strong>ABNGNGLAXXX</span><br />
+          </div>
+          <div
+            class="hidden bg-gray-800 text-white p-4 rounded transition-opacity duration-300"
+            id="payment-link"
+          >
+            <div
+              class="border border-green-500 p-4"
+            >
+              <p class="text-1xl font-bold text-white py-1">USDT--ETH (ByBit)</p>
+              <p class="text-1xl font-bold text-white py-1">
+                0x3904cda4e291f20917fdb5f3177ea231d33ccf18
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -100,9 +124,16 @@
       &copy; 2025 Ohiorenua Aigboje. All rights reserved.
     </footer>
     <script>
+      const bank_transfer = document.getElementById("bank-transfer");
+      const payment_link = document.getElementById("payment-link");
+
       function toggleBankTransferVisibility() {
-        const bank_transfer = document.getElementById("bank-transfer");
+        payment_link.classList.add("hidden");
         bank_transfer.classList.toggle("hidden");
+      }
+      function togglePaymentLinkVisibility() {
+        bank_transfer.classList.add("hidden");
+        payment_link.classList.toggle("hidden");
       }
     </script>
   </body>
