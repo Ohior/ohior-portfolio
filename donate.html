@@ -1,140 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohior's</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-      .mi_bg-image {
-        position: relative;
-        height: 100%;
-      }
-
-      .mi_bg-image::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("./images/myimage.jpg");
-        background-size: cover;
-        background-position: center;
-        filter: blur(8px);
-        z-index: 0;
-      }
-
-      .mi_bg-image > * {
-        position: relative;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body class="bg-black font-sans mi_bg-image">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-10 bg-gray-900 px-6 py-4 text-white shadow-md">
-      <div class="grid sm:grid-cols-12 grid-cols-3 gap-1">
-        <div class="col-span-8 flex flex-row items-center">
-          <a
-            href="./index.html"
-            class="text-2xl font-bold sm:p-4 p-1 hover:underline"
-            >Ohior's</a
-          >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Living with Scleroderma — My Story</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('./images/myimage.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+  <main class="w-full max-w-xl">
+    <article class="mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden ring-1 ring-slate-200">
+      <header class="px-6 py-6 sm:flex sm:items-start sm:gap-4">
+        <div class="flex-shrink-0">
+          <div class="h-16 w-16 rounded-full bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-white text-xl font-semibold">OA</div>
         </div>
-        <a
-          href="./tictactoe.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Game</a
-        >
-        <a
-          href="./donate.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Donate</a
-        >
-      </div>
-    </nav>
-    <!-- Hero Section -->
-    <section
-      class="min-h-screen text-center flex flex-col items-center justify-center"
-    >
-      <div class="bg-green-100 shadow rounded-lg max-w-xl text-left">
-        <div class="bg-green-100 px-16 py-8">
-          <h3 class="text-3xl font-bold pb-3">Living with Scleroderma</h3>
-          <h6 class="text-2xl font-bold text-red-500 pb-3">My Story</h6>
-          <hr class="border-t-2 border-blue-500 my-1" />
-          <span>
-            Hi, I'm <strong>Ohiorenua</strong>. I’m living with
-            <strong>scleroderma</strong>
-          </span>
-          <p>
-            It is a rare autoimmune disease that hardens the skin and affects
-            internal organs. Daily life means managing pain, medications, and
-            constant health costs. Still, I choose to keep going, share my
-            story, and raise awareness. 🙏 Your donation helps me afford
-            treatment, stay stable, and keep pushing forward. Thank you for your
-            support 💙
+        <div class="mt-3 sm:mt-0">
+          <h1 class="text-2xl font-semibold text-slate-900">Living with <span class="text-indigo-600">Scleroderma</span></h1>
+          <p class="mt-1 text-sm text-slate-600">My Story — Hi, I’m <strong>Ohiorenua</strong>.</p>
+        </div>
+      </header>
+
+      <div class="px-6 pb-6">
+        <section class="prose prose-slate max-w-none">
+          <p>I live with <strong>scleroderma</strong>, a rare autoimmune condition that hardens the skin and can affect internal organs. Every day involves managing pain, taking medications, and covering ongoing medical costs — all while trying to keep hope and normalcy.</p>
+          <p>This journey isn't easy, but I choose to keep going: to share my story, raise awareness, and remind anyone facing illness that they are not alone.</p>
+          <p class="mt-4 inline-flex items-center gap-2 text-sm text-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.828l-6.828-6.828a4 4 0 010-5.656z" clip-rule="evenodd" />
+            </svg>
+            <strong>Your support helps me afford treatment and stay stable.</strong>
           </p>
-          <hr class="border-t-2 border-blue-500 my-1" />
-          <div class="grid grid-cols-2 gap-1">
-            <button
-              type="button"
-              class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
-              onclick="toggleBankTransferVisibility()"
-            >
-              Bank Transfer
-            </button>
-            <button
-              type="button"
-              class="w-full text-center bg-blue-500 hover:bg-blue-700 rounded py-2 my-1 font-bold text-1xl"
-              onclick="togglePaymentLinkVisibility()"
-            >
-              Payment Link
-            </button>
-          </div>
-          <div
-            class="hidden bg-gray-800 text-white p-4 rounded transition-opacity duration-300"
-            id="bank-transfer"
-          >
-            <span><strong>Bank Name : </strong>Access Bank</span><br />
-            <span><strong>Account Number : </strong>1475958049</span><br />
-            <span><strong>Account Name : </strong>Ohiorenua Aigboje</span><br />
-            <span><strong>SWIFT Code : </strong>ABNGNGLAXXX</span><br />
-          </div>
-          <div
-            class="hidden bg-gray-800 text-white p-4 rounded transition-opacity duration-300"
-            id="payment-link"
-          >
-            <div
-              class="border border-green-500 p-4"
-            >
-              <p class="text-1xl font-bold text-white py-1">USDT--ETH (ByBit)</p>
-              <p class="text-1xl font-bold text-white py-1">
-                0x3904cda4e291f20917fdb5f3177ea231d33ccf18
-              </p>
-            </div>
-          </div>
+        </section>
+
+        <div class="mt-6 grid grid-cols-2 gap-3">
+          <button id="show-bank" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">Bank Transfer</button>
+          <button id="show-bybit" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">ByBit (USDT/ETH)</button>
+        </div>
+
+        <div id="bank-details" class="hidden mt-4 bg-gray-800 text-white p-4 rounded">
+          <p><strong>Bank Name:</strong> Access Bank</p>
+          <p><strong>Account Number:</strong> 1475958049</p>
+          <p><strong>Account Name:</strong> Ohiorenua Aigboje</p>
+          <p><strong>SWIFT Code:</strong> ABNGNGLAXXX</p>
+        </div>
+
+        <div id="bybit-details" class="hidden mt-4 bg-gray-800 text-white p-4 rounded">
+          <p class="font-bold">USDT--ETH (ByBit)</p>
+          <p class="break-all">0x3904cda4e291f20917fdb5f3177ea231d33ccf18</p>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
-      &copy; 2025 Ohiorenua Aigboje. All rights reserved.
-    </footer>
-    <script>
-      const bank_transfer = document.getElementById("bank-transfer");
-      const payment_link = document.getElementById("payment-link");
+      <footer class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-sm text-slate-600 flex items-center justify-between">
+        <span>Made with ❤️ by Ohiorenua</span>
+        <div class="flex gap-3 items-center">
+          <a href="#" aria-label="Share on Twitter" class="hover:underline">Twitter</a>
+          <a href="#" aria-label="Share on Facebook" class="hover:underline">Facebook</a>
+        </div>
+      </footer>
+    </article>
+  </main>
 
-      function toggleBankTransferVisibility() {
-        payment_link.classList.add("hidden");
-        bank_transfer.classList.toggle("hidden");
-      }
-      function togglePaymentLinkVisibility() {
-        bank_transfer.classList.add("hidden");
-        payment_link.classList.toggle("hidden");
-      }
-    </script>
-  </body>
+  <script>
+    const bankBtn = document.getElementById('show-bank');
+    const bybitBtn = document.getElementById('show-bybit');
+    const bankDetails = document.getElementById('bank-details');
+    const bybitDetails = document.getElementById('bybit-details');
+
+    bankBtn.addEventListener('click', () => {
+      bankDetails.classList.toggle('hidden');
+      bybitDetails.classList.add('hidden');
+    });
+
+    bybitBtn.addEventListener('click', () => {
+      bybitDetails.classList.toggle('hidden');
+      bankDetails.classList.add('hidden');
+    });
+  </script>
+</body>
 </html>
