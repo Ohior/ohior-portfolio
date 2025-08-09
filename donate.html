@@ -1,23 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Living with Scleroderma — My Story</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: url('./images/myimage.jpg') center/cover no-repeat;
-      filter: blur(8px);
-      z-index: -1;
-    }
-  </style>
-</head>
-<body class="min-h-screen flex items-center justify-center p-6">
-  <main class="w-full max-w-xl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohior's</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .mi_bg-image {
+        position: relative;
+        height: 100%;
+      }
+
+      .mi_bg-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./images/myimage.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      .mi_bg-image > * {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-black font-sans mi_bg-image">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-10 bg-gray-900 px-6 py-4 text-white shadow-md">
+      <div class="grid sm:grid-cols-12 grid-cols-3 gap-1">
+        <div class="col-span-8 flex flex-row items-center">
+          <a
+            href="./index.html"
+            class="text-2xl font-bold sm:p-4 p-1 hover:underline"
+            >Ohior's</a
+          >
+        </div>
+        <a
+          href="./tictactoe.html"
+          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
+          >Game</a
+        >
+        <a
+          href="./donate.html"
+          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
+          >Donate</a
+        >
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen text-center flex flex-col items-center justify-center"
+    >
+      <main class="w-full max-w-xl">
     <article class="mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden ring-1 ring-slate-200">
       <header class="px-6 py-6 sm:flex sm:items-start sm:gap-4">
         <div class="flex-shrink-0">
@@ -42,20 +84,8 @@
         </section>
 
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <button id="show-bank" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">Bank Transfer</button>
-          <button id="show-bybit" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">ByBit (USDT/ETH)</button>
-        </div>
-
-        <div id="bank-details" class="hidden mt-4 bg-gray-800 text-white p-4 rounded">
-          <p><strong>Bank Name:</strong> Access Bank</p>
-          <p><strong>Account Number:</strong> 1475958049</p>
-          <p><strong>Account Name:</strong> Ohiorenua Aigboje</p>
-          <p><strong>SWIFT Code:</strong> ABNGNGLAXXX</p>
-        </div>
-
-        <div id="bybit-details" class="hidden mt-4 bg-gray-800 text-white p-4 rounded">
-          <p class="font-bold">USDT--ETH (ByBit)</p>
-          <p class="break-all">0x3904cda4e291f20917fdb5f3177ea231d33ccf18</p>
+          <button onclick="openPopup('bank')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">Bank Transfer</button>
+          <button onclick="openPopup('bybit')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">ByBit (USDT/ETH)</button>
         </div>
       </div>
 
@@ -69,21 +99,43 @@
     </article>
   </main>
 
+  <div id="popup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative">
+      <button onclick="closePopup()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">&times;</button>
+      <div id="popup-content" class="text-sm text-gray-800"></div>
+    </div>
+  </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
+      &copy; 2025 Ohiorenua Aigboje. All rights reserved.
+    </footer>
   <script>
-    const bankBtn = document.getElementById('show-bank');
-    const bybitBtn = document.getElementById('show-bybit');
-    const bankDetails = document.getElementById('bank-details');
-    const bybitDetails = document.getElementById('bybit-details');
+    function openPopup(type) {
+      const popup = document.getElementById('popup');
+      const content = document.getElementById('popup-content');
+      if (type === 'bank') {
+        content.innerHTML = `
+          <h2 class="text-lg font-bold mb-2">Bank Transfer Details</h2>
+          <p><strong>Bank Name:</strong> Access Bank</p>
+          <p><strong>Account Number:</strong> 1475958049</p>
+          <p><strong>Account Name:</strong> Ohiorenua Aigboje</p>
+          <p><strong>SWIFT Code:</strong> ABNGNGLAXXX</p>
+        `;
+      } else if (type === 'bybit') {
+        content.innerHTML = `
+          <h2 class="text-lg font-bold mb-2">ByBit (USDT/ETH)</h2>
+          <p class="break-all">0x3904cda4e291f20917fdb5f3177ea231d33ccf18</p>
+        `;
+      }
+      popup.classList.remove('hidden');
+    }
 
-    bankBtn.addEventListener('click', () => {
-      bankDetails.classList.toggle('hidden');
-      bybitDetails.classList.add('hidden');
-    });
-
-    bybitBtn.addEventListener('click', () => {
-      bybitDetails.classList.toggle('hidden');
-      bankDetails.classList.add('hidden');
-    });
+    function closePopup() {
+      document.getElementById('popup').classList.add('hidden');
+    }
   </script>
-</body>
+  </body>
 </html>
