@@ -1,135 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohior's</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      .mi_bg-image {
-        position: relative;
-        height: 100%;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Ohiorenua</title>
+  <meta name="description" content="Support Ohiorenua Aigboje – helping with medical care and scleroderma awareness." />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-      .mi_bg-image::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("./images/myimage.jpg");
-        background-size: cover;
-        background-position: center;
-        filter: blur(8px);
-        z-index: 0;
-      }
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("./images/myimage.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px) brightness(0.5);
+      z-index: -1;
+    }
+  </style>
+</head>
 
-      .mi_bg-image > * {
-        position: relative;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body class="bg-black font-sans mi_bg-image">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-10 bg-gray-900 px-6 py-4 text-white shadow-md">
-      <div class="grid sm:grid-cols-12 grid-cols-3 gap-1">
-        <div class="col-span-8 flex flex-row items-center">
-          <a
-            href="./index.html"
-            class="text-2xl font-bold sm:p-4 p-1 hover:underline"
-            >Ohior's</a
-          >
-        </div>
-        <a
-          href="./tictactoe.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Game</a
-        >
-        <a
-          href="./donate.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Donate</a
-        >
-      </div>
-    </nav>
-    <!-- Hero Section -->
-    <section
-      class="min-h-screen text-center flex flex-col items-center justify-center"
-    >
-      <main class="w-full max-w-xl">
-    <article class="mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden ring-1 ring-slate-200">
-      <header class="px-6 py-6 sm:flex sm:items-start sm:gap-4">
-        <div class="flex-shrink-0">
-          <div class="h-16 w-16 rounded-full bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-white text-xl font-semibold">OA</div>
-        </div>
-        <div class="mt-3 sm:mt-0">
-          <h1 class="text-2xl font-semibold text-slate-900">Living with <span class="text-indigo-600">Scleroderma</span></h1>
-          <p class="mt-1 text-sm text-slate-600">My Story — Hi, I’m <strong>Ohiorenua</strong>.</p>
-        </div>
+<body class="min-h-screen font-sans text-slate-800">
+
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold text-slate-900">Ohiorenua</a>
+      <nav class="flex gap-4 text-sm font-medium">
+        <a href="donate.html" class="text-indigo-600">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="px-6 py-12">
+    <article class="max-w-xl mx-auto bg-white rounded-2xl shadow-xl ring-1 ring-slate-200 overflow-hidden">
+
+      <!-- Intro -->
+      <header class="p-6">
+        <h1 class="text-2xl font-semibold text-slate-900">Support My Journey</h1>
+        <p class="mt-2 text-slate-600">
+          Hi, I’m <strong>Ohiorenua</strong>, a self‑taught software developer living with <strong>scleroderma</strong>.
+        </p>
       </header>
 
-      <div class="px-6 pb-6">
-        <section class="prose prose-slate max-w-none">
-          <p>I live with <strong>scleroderma</strong>, a rare autoimmune condition that hardens the skin and can affect internal organs. Every day involves managing pain, taking medications, and covering ongoing medical costs — all while trying to keep hope and normalcy.</p>
-          <p>This journey isn't easy, but I choose to keep going: to share my story, raise awareness, and remind anyone facing illness that they are not alone.</p>
-          <p class="mt-4 inline-flex items-center gap-2 text-sm text-slate-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.828l-6.828-6.828a4 4 0 010-5.656z" clip-rule="evenodd" />
-            </svg>
-            <strong>Your support helps me afford treatment and stay stable.</strong>
-          </p>
-        </section>
+      <!-- Story -->
+      <section class="px-6 prose prose-slate max-w-none">
+        <p>
+          Scleroderma is a rare autoimmune condition that affects the skin and internal organs. Managing it requires
+          ongoing medication, regular care, and consistent monitoring.
+        </p>
+        <p>
+          Alongside this, I continue to build software, share awareness, and encourage others facing chronic illness
+          to keep creating and learning.
+        </p>
+        <p class="font-medium">
+          Your support helps me stay medically stable and continue this work.
+        </p>
+      </section>
 
-        <div class="mt-6 grid grid-cols-2 gap-3">
-          <button onclick="openPopup('bank')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">Bank Transfer</button>
-          <button onclick="openPopup('bybit')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-4 py-2 font-medium shadow">ByBit (USDT/ETH)</button>
+      <!-- Actions -->
+      <section class="px-6 py-6">
+        <div class="grid gap-3 sm:grid-cols-2">
+          <button onclick="openPopup('bank')"
+            class="w-full rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white py-3 font-medium">
+            Bank Transfer
+          </button>
+          <button onclick="openPopup('crypto')"
+            class="w-full rounded-xl bg-slate-900 hover:bg-slate-800 text-white py-3 font-medium">
+            Crypto (USDT / ETH)
+          </button>
         </div>
-      </div>
+      </section>
 
-      <footer class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-sm text-slate-600 flex items-center justify-between">
-        <span>Made with ❤️ by Ohiorenua</span>
-        <div class="flex gap-3 items-center">
-          <a href="#" aria-label="Share on Twitter" class="hover:underline">Twitter</a>
-          <a href="#" aria-label="Share on Facebook" class="hover:underline">Facebook</a>
-        </div>
+      <!-- Trust -->
+      <section class="px-6 pb-6 text-sm text-slate-600">
+        <p>
+          Donations are optional and voluntary. Thank you for reading, sharing, or supporting in any way.
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-slate-50 border-t border-slate-200 px-6 py-4 text-xs text-slate-500 flex justify-between">
+        <span>© 2026 Ohiorenua Aigboje</span>
+        <span>Built with GitHub Pages</span>
       </footer>
     </article>
   </main>
 
+  <!-- Popup -->
   <div id="popup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative">
-      <button onclick="closePopup()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">&times;</button>
-      <div id="popup-content" class="text-sm text-gray-800"></div>
+    <div class="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 relative">
+      <button onclick="closePopup()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-600">×</button>
+      <div id="popup-content" class="text-sm"></div>
     </div>
   </div>
 
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
-      &copy; 2025 Ohiorenua Aigboje. All rights reserved.
-    </footer>
   <script>
+    function copyText(text, label = "Copied") {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(label + " copied to clipboard");
+      }).catch(() => {
+        alert("Failed to copy");
+      });
+    }
+
+
     function openPopup(type) {
       const popup = document.getElementById('popup');
       const content = document.getElementById('popup-content');
+
       if (type === 'bank') {
         content.innerHTML = `
-          <h2 class="text-lg font-bold mb-2">Bank Transfer Details</h2>
-          <p><strong>Bank Name:</strong> Access Bank</p>
-          <p><strong>Account Number:</strong> 1475958049</p>
+          <h2 class="text-lg font-semibold mb-2">Bank Transfer</h2>
+          <p><strong>Bank:</strong> Access Bank</p>
+          <p><strong>Account Number:</strong><span
+            onclick="copyText('1475958049', 'Account number')"
+            class="cursor-pointer text-indigo-600 hover"
+            title="Click to copy"
+          >1475958049</span>
+          </p>
           <p><strong>Account Name:</strong> Ohiorenua Aigboje</p>
-          <p><strong>SWIFT Code:</strong> ABNGNGLAXXX</p>
-        `;
-      } else if (type === 'bybit') {
+          <p><strong>SWIFT:</strong> ABNGNGLAXXX</p>
+          `;
+      }
+
+      if (type === 'crypto') {
         content.innerHTML = `
-          <h2 class="text-lg font-bold mb-2">ByBit (USDT/ETH)</h2>
-          <p class="break-all">0x3904cda4e291f20917fdb5f3177ea231d33ccf18</p>
+          <h2 class="text-lg font-semibold mb-2">Crypto</h2>
+          <p><strong>Coin:</strong> USDT</p>
+          <p><strong>Chain Type:</strong> Ethereum (ERC20)</p>
+          <strong>Wallet Address:</strong><br /><span
+            onclick="copyText('0x3904cda4e291f20917fdb5f3177ea231d33ccf18', 'Wallet address')"
+            class="cursor-pointer text-indigo-600 break-all hover"
+            title="Click to copy"
+          >0x3904cda4e291f20917fdb5f3177ea231d33ccf18</span>
         `;
       }
+
       popup.classList.remove('hidden');
     }
 
@@ -137,5 +147,6 @@
       document.getElementById('popup').classList.add('hidden');
     }
   </script>
-  </body>
+</body>
+
 </html>

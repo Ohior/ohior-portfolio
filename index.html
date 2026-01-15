@@ -3,132 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohior's</title>
+    <title>Ohiorenua Aigboje – Software Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-black text-white font-sans">
-        <!-- Navbar -->
-    <nav class="sticky top-0 bg-gray-900 px-6 py-4 text-white shadow-md">
-      <div class="grid sm:grid-cols-12 grid-cols-3 gap-1">
-        <div class="col-span-8 flex flex-row items-center">
-          <a href="./index.html" class="text-2xl font-bold sm:p-4 p-1 hover:underline"
-            >Ohior's</a
-          >
-        </div>
-        <a
-          href="./tictactoe.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Game</a
-        >
-        <a
-          href="./donate.html"
-          class="sm:col-span-2 text-2xl font-bold sm:p-4 p-1 hover:underline"
-          >Donate</a
-        >
+  <body class="bg-black text-white font-sans leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-xl font-semibold text-slate-900">Ohiorenua</a>
+        <nav class="flex gap-6 text-sm font-medium text-slate-700">
+          <a href="#about" class="hover:text-indigo-600">About</a>
+          <a href="#skills" class="hover:text-indigo-600">Skills</a>
+          <a href="#projects" class="hover:text-indigo-600">Projects</a>
+          <a href="donate.html" class="text-indigo-600 font-semibold">Support</a>
+        </nav>
       </div>
-    </nav>
+    </header>
+
     <!-- Hero Section -->
-    <section
-      class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 text-center md:text-left"
-    >
+    <section class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 py-16 max-w-6xl mx-auto">
       <!-- Text -->
       <div class="md:w-1/2">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Ohiorenua Aigboje</h1>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Hi, I’m Ohiorenua Aigboje</h1>
         <p class="text-gray-300 mb-6">
-          I’m a self-taught developer passionate about building tools, apps, and
-          digital solutions that help people. Living in Edo state, Nigeria, I
-          specialize in Kotlin, Python, and cross-platform apps. I also enjoy
-          exploring AI and automation.
+          A self-taught software developer based in Edo State, Nigeria. I build practical, user-focused applications
+          that solve real problems. My work spans mobile apps, backend systems, and automation tools.
         </p>
-        <div class="flex flex-wrap justify-center md:justify-start gap-4">
-          <a
-            href="https://github.com/Ohior/"
-            class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded transition"
-            >GitHub</a
-          >
-          <a
-            href="mailto:iamohior@gmail.com"
-            class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded transition"
-            >Email</a
-          >
-          <a
-            href="https://www.instagram.com/ohiorenuaa/"
-            class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded transition"
-            >Instagram</a
-          >
+        <p class="text-gray-400 mb-8">
+          With a strong focus on Kotlin and Python, I enjoy working on cross-platform applications, experimenting with
+          AI-powered tools, and improving everyday digital workflows.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://github.com/Ohior/" class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-5 rounded transition">GitHub</a>
+          <a href="mailto:iamohior@gmail.com" class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-5 rounded transition">Email</a>
+          <a href="https://www.instagram.com/ohiorenuaa/" class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-5 rounded transition">Instagram</a>
         </div>
       </div>
 
       <!-- Image -->
-      <div class="md:w-1/2">
-        <img
-          src="./images/myimage.jpg"
-          alt="profile image"
-          class="w-64 h-64 md:w-[500px] md:h-[500px] rounded-full object-cover mx-auto"
-        />
+      <div class="md:w-1/2 flex justify-center">
+        <img src="./images/myimage.jpg" alt="Ohiorenua profile photo" class="w-64 h-64 md:w-[420px] md:h-[420px] rounded-full object-cover shadow-lg" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="px-6 py-20 bg-gray-900">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+        <p class="text-gray-300 mb-6">
+          I started my programming journey by teaching myself how to build software from scratch. Over time, this
+          curiosity turned into a passion for creating reliable and meaningful digital products.
+        </p>
+        <p class="text-gray-400">
+          I value clean code, thoughtful design, and continuous learning. Whether I’m building a mobile app or
+          automating a workflow, my goal is always the same: deliver solutions that are simple, effective, and
+          maintainable.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="px-6 py-20 bg-gray-800">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Skills & Technologies</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Languages</h3>
+            <p class="text-gray-300">Kotlin, Python, JavaScript</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Mobile Development</h3>
+            <p class="text-gray-300">Jetpack Compose, Kotlin Multiplatform</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Backend & APIs</h3>
+            <p class="text-gray-300">Flask, REST APIs, MongoDB</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Automation & Tools</h3>
+            <p class="text-gray-300">FFmpeg, Bots, AI integrations</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Frontend</h3>
+            <p class="text-gray-300">HTML, Tailwind CSS</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="font-semibold mb-2">Other</h3>
+            <p class="text-gray-300">Git, Linux, App Architecture</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="px-6 py-16 bg-gray-800">
-      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Card 1 -->
-        <div
-          class="flex flex-col md:flex-row items-center md:items-start gap-4 bg-gray-700 p-6 rounded-lg shadow-lg hover:cursor-pointer transition"
-          data-id="jat-sharer"
-        >
-          <img
-            src="./images/share.png"
-            alt="Share App"
-            class="w-32 h-32 object-cover rounded"
-          />
-          <div class="text-center md:text-left">
-            <h3 class="text-xl font-bold">Sharing App</h3>
-            <p class="text-gray-300">
-              A mobile app for sharing files between your mobile devices and PC
-              through wireless network (Wi-Fi).
+    <section id="projects" class="px-6 py-20 bg-gray-900">
+      <h2 class="text-3xl font-bold mb-12 text-center">Selected Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+        <div class="flex gap-5 bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer" data-id="jat-sharer">
+          <img src="./images/share.png" alt="JatSharer" class="w-28 h-28 rounded object-cover" />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">JatSharer</h3>
+            <p class="text-gray-300 mb-2">
+              A wireless file-sharing application that allows seamless transfer of files between mobile devices and PCs
+              over a local Wi-Fi network.
             </p>
+            <p class="text-gray-400 text-sm">Android • Networking • Productivity</p>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div
-          class="flex flex-col md:flex-row items-center md:items-start gap-4 bg-gray-700 p-6 rounded-lg shadow-lg hover:cursor-pointer transition"
-          data-id="mediarock"
-        >
-          <img
-            src="./images/cinema.png"
-            alt="MediaRock App"
-            class="w-32 h-32 object-cover rounded"
-          />
-          <div class="text-center md:text-left">
-            <h3 class="text-xl font-bold">MediaRock App</h3>
-            <p class="text-gray-300">
-              A mobile app for downloading and watching movies and reading PDFs.
-              Built with Jetpack Compose.
+        <div class="flex gap-5 bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer" data-id="mediarock">
+          <img src="./images/cinema.png" alt="MediaRock" class="w-28 h-28 rounded object-cover" />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">MediaRock</h3>
+            <p class="text-gray-300 mb-2">
+              A media application for downloading and streaming movies, as well as reading PDF documents, built using
+              Jetpack Compose.
             </p>
+            <p class="text-gray-400 text-sm">Android • Media • Jetpack Compose</p>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-6 text-gray-500 bg-gray-800 text-sm">
-      &copy; 2025 Ohiorenua Aigboje. All rights reserved.
+    <footer class="bg-gray-800 py-10 text-center text-gray-500 text-sm">
+      <p class="mb-2">© 2025 Ohiorenua Aigboje</p>
+      <p>Building useful software, one project at a time.</p>
     </footer>
-    <script>
-      document
-        .querySelector("[data-id='jat-sharer']")
-        .addEventListener("click", () => {
-          window.location.href = "https://github.com/Ohior/JatSharer";
-        });
 
-      document
-        .querySelector("[data-id='mediarock']")
-        .addEventListener("click", () => {
-          window.location.href = "https://github.com/Ohior/MediaRock";
-        });
+    <script>
+      document.querySelector("[data-id='jat-sharer']").onclick = () => {
+        window.location.href = "https://github.com/Ohior/JatSharer";
+      };
+      document.querySelector("[data-id='mediarock']").onclick = () => {
+        window.location.href = "https://github.com/Ohior/MediaRock";
+      };
     </script>
+
   </body>
 </html>
